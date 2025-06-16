@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>My App Home</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 80vh;
+    }
+    header {
+      text-align: center;
+      padding: 1rem;
+    }
+    header img {
+      max-width: 100%;
+      height: auto;
+    }
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .buttons {
+      display: flex;
+      gap: 4rem;
+    }
+    .buttons button {
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .start {
+      background: #4caf50;
+      color: white;
+    }
+    .exit {
+      background: #f44336;
+      color: white;
+    }
+    footer {
+      text-align: center;
+      padding: 0.5rem;
+      background: #333;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://www.transparentpng.com/download/school-bus/real-chauffeur-school-bus-free-transparent--rVkA4z.png" width="200" height="100" alt="App Banner" />
+  </header>
+
+  <main>
+    <div class="buttons">
+     <a href="https://jagannh.github.io/ScanQR/"> <button class="start" onclick="goStart()">Start</button></a>
+      <button class="exit" onclick="goExit()">Exit</button>
+    </div>
+  </main>
+
+  <footer>
+    Developed by: V Jagannatha N. Hugar
+  </footer>
+
+  <script>
+    function goStart() {
+      // Redirect to another site
+      window.location.href = "https://target-website.com";
+    }
+    function goExit() {
+      // Attempt to close the window (works only if opened by script)
+      window.open('', '_self', '');
+      window.close(); // may be blocked by browser :contentReference[oaicite:1]{index=1}
+    }
+  </script>
+</body>
+</html>
